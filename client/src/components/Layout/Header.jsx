@@ -64,33 +64,18 @@ export default function Header() {
           menuOpen ? "d-flex w-100 mt-3" : "d-none"
         }`}
       >
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            `text-decoration-none nav-link ${
-              isActive
-            }`
-          }
-        >
+        <NavLink to="/" className="text-decoration-none nav-link text-dark">
           Home
         </NavLink>
         <NavLink
           to="/events"
-          className={({ isActive }) =>
-            `text-decoration-none nav-link ${
-              isActive ? "text-primary fw-bold" : "text-dark"
-            }`
-          }
+          className="text-decoration-none nav-link text-dark"
         >
           Events and Activities
         </NavLink>
         <NavLink
           to="/membership"
-         className={({ isActive }) =>
-            `text-decoration-none nav-link ${
-              isActive ? "text-primary fw-bold" : "text-dark"
-            }`
-          }
+          className="text-decoration-none nav-link text-dark"
         >
           Membership
         </NavLink>
@@ -98,21 +83,13 @@ export default function Header() {
           <>
             <NavLink
               to="/register"
-              className={({ isActive }) =>
-            `text-decoration-none nav-link ${
-              isActive ? "text-primary fw-bold" : "text-dark"
-            }`
-          }
+              className="text-decoration-none nav-link text-dark"
             >
               Register
             </NavLink>
             <NavLink
               to="/login"
-             className={({ isActive }) =>
-            `text-decoration-none nav-link ${
-              isActive ? "text-primary fw-bold" : "text-dark"
-            }`
-          }
+              className="text-decoration-none nav-link text-dark"
             >
               Login
             </NavLink>
@@ -122,15 +99,11 @@ export default function Header() {
             <NavLink
               onClick={handleLogout}
               to="/login"
-             className={({ isActive }) =>
-            `text-decoration-none nav-link ${
-              isActive ? "text-primary fw-bold" : "text-dark"
-            }`
-          }
+              className="text-decoration-none nav-link text-dark"
             >
-              <button type="button" class="btn btn-outline-danger">
-                Logout
-              </button>
+              <button type="button" class="btn btn-outline-danger">Logout</button>
+           
+             
             </NavLink>
           </>
         )}
