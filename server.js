@@ -30,8 +30,8 @@ app.use(express.static(path.join(__dirname, "./client/build")));
 app.use("/api/v1/auth", authRoutes);
 
 // rest api
-app.get("/", (req, res) => {
-  res.send("<h1>Hello World -- ORG--APP</h1>");
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 const PORT = process.env.PORT;
