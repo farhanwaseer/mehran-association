@@ -68,7 +68,7 @@ export default function Header() {
           to="/"
           className={({ isActive }) =>
             `text-decoration-none nav-link ${
-              isActive ? " fw-bold" : "text-dark"
+              isActive
             }`
           }
         >
