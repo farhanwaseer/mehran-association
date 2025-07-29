@@ -22,12 +22,12 @@ const Footer = () => {
         <Row className="align-items-center mt-5">
           {/* Left Navigation Links */}
           <Col md={6} className="footer-link">
-            {/* <nav className="mb-3 mb-md-5">
+            <nav className="mb-3 mb-md-5">
               <NavLink to="/" className="me-3" activeClassName="active" exact>
                 Home
               </NavLink>
               <NavLink to="/events" className="me-3" activeClassName="active">
-                Events 
+                Events
               </NavLink>
               <NavLink
                 to="/membership"
@@ -37,48 +37,6 @@ const Footer = () => {
                 Membership
               </NavLink>
               <NavLink to="/join" className="me-3" activeClassName="active">
-                Join Us
-              </NavLink>
-            </nav> */}
-            <nav className="mb-3 mb-md-5">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  `me-3 nav-link ${
-                    isActive ? "active fw-bold text-primary" : "text-dark"
-                  }`
-                }
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to="/events"
-                className={({ isActive }) =>
-                  `me-3 nav-link ${
-                    isActive ? "active fw-bold text-primary" : "text-dark"
-                  }`
-                }
-              >
-                Events
-              </NavLink>
-              <NavLink
-                to="/membership"
-                className={({ isActive }) =>
-                  `me-3 nav-link ${
-                    isActive ? "active fw-bold text-primary" : "text-dark"
-                  }`
-                }
-              >
-                Membership
-              </NavLink>
-              <NavLink
-                to="/join"
-                className={({ isActive }) =>
-                  `me-3 nav-link ${
-                    isActive ? "active fw-bold text-primary" : "text-dark"
-                  }`
-                }
-              >
                 Join Us
               </NavLink>
             </nav>
