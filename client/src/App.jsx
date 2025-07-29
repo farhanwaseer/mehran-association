@@ -10,7 +10,7 @@ import Policy from "./pages/Policy";
 import PageNotFound from "./pages/PageNotFound";
 import Register from "./pages/Auth/Register";
 import Login from "./pages/Auth/Login";
-import DashBoard from "./pages/user/dashBoard";
+import DashBoard from "./pages/user/DashBoard";
 import PrivateRoute from "./components/Routes/privateRoute";
 
 function App() {
