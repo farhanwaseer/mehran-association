@@ -22,7 +22,7 @@ const Footer = () => {
         <Row className="align-items-center mt-5">
           {/* Left Navigation Links */}
           <Col md={6} className="footer-link">
-            <nav className="mb-3 mb-md-5">
+            {/* <nav className="mb-3 mb-md-5">
               <NavLink to="/" className="me-3" activeClassName="active" exact>
                 Home
               </NavLink>
@@ -37,6 +37,48 @@ const Footer = () => {
                 Membership
               </NavLink>
               <NavLink to="/join" className="me-3" activeClassName="active">
+                Join Us
+              </NavLink>
+            </nav> */}
+            <nav className="mb-3 mb-md-5">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `me-3 nav-link ${
+                    isActive ? "active fw-bold text-primary" : "text-dark"
+                  }`
+                }
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/events"
+                className={({ isActive }) =>
+                  `me-3 nav-link ${
+                    isActive ? "active fw-bold text-primary" : "text-dark"
+                  }`
+                }
+              >
+                Events
+              </NavLink>
+              <NavLink
+                to="/membership"
+                className={({ isActive }) =>
+                  `me-3 nav-link ${
+                    isActive ? "active fw-bold text-primary" : "text-dark"
+                  }`
+                }
+              >
+                Membership
+              </NavLink>
+              <NavLink
+                to="/join"
+                className={({ isActive }) =>
+                  `me-3 nav-link ${
+                    isActive ? "active fw-bold text-primary" : "text-dark"
+                  }`
+                }
+              >
                 Join Us
               </NavLink>
             </nav>
@@ -68,19 +110,23 @@ const Footer = () => {
               to="https://www.facebook.com/farhanaliwaseer"
               target="_blank"
               className="dev-farhan p-2 text-dark"
-              
             >
               Farhan Waseer
-               <img src={facebook} alt="Facebook" className="ms-2 " width="20" height="20" />
+              <img
+                src={facebook}
+                alt="Facebook"
+                className="ms-2 "
+                width="20"
+                height="20"
+              />
             </Link>
           </h6>
-          <h6 className="text-center text-dark">  Under Development</h6>
+          <h6 className="text-center text-dark"> Under Development</h6>
         </Row>
       </Container>
     </footer>
   );
 };
-
 
 // const Footer = () => {
 //   useEffect(() => {
@@ -151,13 +197,12 @@ const Footer = () => {
 //               </Link>
 //             </h6>
 
-//             <h6 className="text-dark mb-0">Under Development</h6> 
+//             <h6 className="text-dark mb-0">Under Development</h6>
 //           </Col>
 //         </Row>
 //       </Container>
 //     </footer>
 //   );
 // };
-
 
 export default Footer;

@@ -17,8 +17,7 @@ export default function Header() {
       token: "",
     });
     localStorage.removeItem("auth");
-    toast.success('User logged out successfully')
-   
+    toast.success("User logged out successfully");
   };
 
   return (
@@ -65,18 +64,33 @@ export default function Header() {
           menuOpen ? "d-flex w-100 mt-3" : "d-none"
         }`}
       >
-        <NavLink to="/" className="text-decoration-none nav-link text-dark">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `text-decoration-none nav-link ${
+              isActive ? " fw-bold" : "text-dark"
+            }`
+          }
+        >
           Home
         </NavLink>
         <NavLink
           to="/events"
-          className="text-decoration-none nav-link text-dark"
+          className={({ isActive }) =>
+            `text-decoration-none nav-link ${
+              isActive ? "text-primary fw-bold" : "text-dark"
+            }`
+          }
         >
           Events and Activities
         </NavLink>
         <NavLink
           to="/membership"
-          className="text-decoration-none nav-link text-dark"
+         className={({ isActive }) =>
+            `text-decoration-none nav-link ${
+              isActive ? "text-primary fw-bold" : "text-dark"
+            }`
+          }
         >
           Membership
         </NavLink>
@@ -84,13 +98,21 @@ export default function Header() {
           <>
             <NavLink
               to="/register"
-              className="text-decoration-none nav-link text-dark"
+              className={({ isActive }) =>
+            `text-decoration-none nav-link ${
+              isActive ? "text-primary fw-bold" : "text-dark"
+            }`
+          }
             >
               Register
             </NavLink>
             <NavLink
               to="/login"
-              className="text-decoration-none nav-link text-dark"
+             className={({ isActive }) =>
+            `text-decoration-none nav-link ${
+              isActive ? "text-primary fw-bold" : "text-dark"
+            }`
+          }
             >
               Login
             </NavLink>
@@ -100,11 +122,15 @@ export default function Header() {
             <NavLink
               onClick={handleLogout}
               to="/login"
-              className="text-decoration-none nav-link text-dark"
+             className={({ isActive }) =>
+            `text-decoration-none nav-link ${
+              isActive ? "text-primary fw-bold" : "text-dark"
+            }`
+          }
             >
-              <button type="button" class="btn btn-outline-danger">Logout</button>
-           
-             
+              <button type="button" class="btn btn-outline-danger">
+                Logout
+              </button>
             </NavLink>
           </>
         )}
